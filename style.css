@@ -223,3 +223,26 @@ h3 {
     font-size: 0.9em;
 }
 
+
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .selection-container {
+        justify-content: center;
+    }
+    
+    .agent-btn, .map-btn {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+    
+    .agent-card {
+        min-width: 120px;
+        margin: 5px;
+    }
+}
