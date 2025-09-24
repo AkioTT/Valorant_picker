@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Pick Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Valorant Agent Picker</h1>
+        <p>Выбери карту и агентов союзников, чтобы получить рекомендацию.</p>
+
+        <!-- Выбор карты -->
+        <div class="section">
+            <h2>Шаг 1: Выбери карту</h2>
+            <div id="map-container" class="selection-container">
+                <!-- Карты будут добавлены через JS -->
+            </div>
+        </div>
+
+        <!-- Секция для выбора предпочтительных агентов -->
+        <div class="section">
+            <h2>Шаг 2: Выбери своих любимых агентов</h2>
+            <p>Эти агенты будут получать приоритет в рекомендациях. Можно выбрать до 8 агентов.</p>
+            
+            <!-- Фильтры по ролям -->
+            <div class="filters">
+                <button class="filter-btn active" data-role="all">Все</button>
+                <button class="filter-btn" data-role="duelist">Дуэлянт</button>
+                <button class="filter-btn" data-role="initiator">Инициатор</button>
+                <button class="filter-btn" data-role="controller">Контроллер</button>
+                <button class="filter-btn" data-role="sentinel">Страж</button>
+            </div>
+            
+            <!-- Контейнер для кнопок агентов -->
+            <div id="preferred-agents-container" class="selection-container">
+                <!-- Кнопки предпочтений появятся здесь автоматически -->
+            </div>
+            
+            <!-- Список выбранных предпочтений -->
+            <div id="selected-preferred">
+                <h3>Твои предпочтения:</h3>
+                <ul id="selected-preferred-list"></ul>
+            </div>
+        </div>
+
+        <!-- Выбор агентов союзников -->
+        <div class="section">
+            <h2>Шаг 3: Выбери агентов союзников (макс. 4)</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-role="all">Все</button>
+                <button class="filter-btn" data-role="duelist">Дуэлянт</button>
+                <button class="filter-btn" data-role="initiator">Инициатор</button>
+                <button class="filter-btn" data-role="controller">Контроллер</button>
+                <button class="filter-btn" data-role="sentinel">Страж</button>
+            </div>
+            <div id="agents-container" class="selection-container">
+                <!-- Агенты будут добавлены через JS -->
+            </div>
+            <div id="selected-allies">
+                <h3>Выбранные союзники:</h3>
+                <ul id="selected-allies-list"></ul>
+            </div>
+        </div>
+
+        <!-- Кнопка для получения рекомендации -->
+        <div class="section">
+            <button id="recommend-btn">Найти лучшего агента!</button>
+        </div>
+
+        <!-- Блок с результатами -->
+        <div class="section">
+            <div id="recommendation-container" style="display: none;">
+                <h2>На основе твоего выбора, мы рекомендуем:</h2>
+                <div id="recommendation-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

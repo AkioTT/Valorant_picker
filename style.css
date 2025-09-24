@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Valorant';
+    src:url('fonts/Valorant\ _font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap; /* Для оптимизации загрузки */
+}
+@font-face {
+    font-family: 'Vivil';
+    src:url('fonts/vivl-rail.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Valorant','vivil', Arial, sans-serif;
+    color: #ece8e1;
+    margin: 0;
+    padding: 20px;
+    font-weight: normal;
+}
+body {
+    
+    background: linear-gradient(90deg, #0f1923, #2a0a0a, #0f1923);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff4655;
+    text-align: center;
+    font-size: 3em;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.selection-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.agent-btn, .map-btn {
+    padding: 10px 15px;
+    background-color: #2a2e3a;
+    border: 2px solid #4a4e5a;
+    color: #ece8e1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.agent-btn:hover, .map-btn:hover {
+    border-color: #ff4655;
+    transform: translateY(-2px);
+}
+
+.agent-btn.selected, .map-btn.selected {
+    background-color: #ff4655;
+    border-color: #ff4655;
+    color: #0f1923;
+    font-weight: bold;
+}
+
+.filters {
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #4a4e5a;
+    border: none;
+    color: #ece8e1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: #ff4655;
+}
+
+#selected-allies-list {
+    list-style: none;
+    padding: 0;
+}
+
+#selected-allies-list li {
+    display: inline-block;
+    background-color: #2a2e3a;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+#recommend-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff4655;
+    color: #0f1923;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#recommend-btn:hover {
+    background-color: #e03e4c;
+}
+
+.agent-card {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #2a2e3a;
+    border-radius: 5px;
+}
+
+.agent-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff4655;
+}
+
+.preferred-btn.selected {
+    background-color: #8a2be2; /* Фиолетовый для отличия от обычного выбора */
+    border-color: #8a2be2;
+}
+
+#selected-preferred-list{
+    background: linear-gradient(90deg, 
+        #0f1923 0%, 
+        #1a1015 30%, 
+        #2d0a12 60%, 
+        #450a0a 100%);
+        
+}
+
+.score-breakdown {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #1a1a2e;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.score-breakdown small {
+    display: block;
+    color: #ccc;
+}
+
+.remove-btn {
+    background: #ff4655;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.agent-card h3 {
+    color: #ff4655;
+    margin: 10px 0 5px;
+}
+
+h1, h2, h3 {
+    font-family: 'Valorant', 'Vivil', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ff4655;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+/* Кнопки и интерфейс */
+.agent-btn, .map-btn, .filter-btn, #recommend-btn {
+    font-family: 'Valorant', 'Vivil', Arial, sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+}
+
+/* Карточки агентов */
+.agent-card h3 {
+    font-family: 'Valorant', 'Vivil', Arial, sans-serif;
+    font-size: 1.8em;
+}
+
+.agent-card p {
+    font-family: 'Vivil', sans-serif; /* Для обычного текста оставляем стандартный шрифт */
+    font-size: 0.9em;
+}
+
